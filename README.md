@@ -17,7 +17,7 @@
 
    ```sh
 
-   git clone https://github.com/yollow96/LAB-AP-11-2026.git
+   git clone https://github.com/yollow96/ASIS-AP-11-2026.git
 
    ```
 
@@ -25,7 +25,7 @@
 
    ```sh
 
-   cd LAB-AP-11-2026
+   cd ASIS-AP-11-2026
    git branch NIM_ANDA
    git checkout NIM_ANDA
    git config user.name USERNAME_GITHUB
@@ -108,7 +108,7 @@
    #3. Scroll ke bagian bawah dan pilih menu Dveloper settings
    #4. Pilih Prsonal access tokens
    #5. Pilih Generate new tokes
-   #6. Tuliskan note untuk token anda (ex: Token for LAB-AP-11-2026)
+   #6. Tuliskan note untuk token anda (ex: Token for ASIS-AP-11-2026)
    #7. Atur waktu expiration token anda (sesuai keinginan anda)
    #8. Pada select scope, ceklis box repo
    #9. Klik generate new token
