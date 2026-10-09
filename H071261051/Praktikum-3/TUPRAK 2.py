@@ -23,9 +23,9 @@ while True:
 print()
 print("--- Daftar Kursi Tersedia ---")
 
-for baris in range(1, jumlah_baris):
+for baris in range(1, jumlah_baris + 1):
 
-    for kursi in range(1, jumlah_kursi):
+    for kursi in range(1, jumlah_kursi + 1):
 
         if kursi == 13:
             continue

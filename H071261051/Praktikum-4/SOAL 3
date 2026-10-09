@@ -1,0 +1,14 @@
+def countdown (detik):
+    if detik < 0:
+        print("Input tidak valid, angka tidak boleh negatif")
+        angka_awal = int(input("Masukkan angka awal hitung mundur :"))
+        countdown (angka_awal)
+    elif detik == 0:
+        print(0)
+        print("luncurkan!")
+    else:
+        print(detik)
+        countdown(detik - 1)
+
+angka_awal = int(input("Masukkan angka awal :"))
+countdown(angka_awal)

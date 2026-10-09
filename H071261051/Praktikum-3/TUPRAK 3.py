@@ -53,3 +53,4 @@ while sisa_kursi > 0:
 print()
 print("--- Semua Kursi Terisi ---")
 print("Total pendapatan perjalanan PO BUS kali ini: Rp", total_pendapatan)
+

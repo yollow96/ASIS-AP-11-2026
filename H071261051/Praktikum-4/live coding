@@ -1,0 +1,22 @@
+while True:
+    print ("Pengujian Jenis Karakter")
+    print ("------------------------")
+    karakter = input("Masukkan Karakter:")
+    print (f"Karakter ={karakter}")
+           
+    if "A" <= karakter <= "Z":
+        print ("Huruf kapital? True")
+    else:
+        print ("Huruf kapital? False")
+    
+    if "a" <= karakter <= "z":
+        print ("Huruf kecil? True")
+    else:
+        print ("Huruf kecil? False")
+
+    if "0" <= karakter <= "9":
+        print ("Angka? True")
+    else:
+        print ("Angka? False")
+
+    
