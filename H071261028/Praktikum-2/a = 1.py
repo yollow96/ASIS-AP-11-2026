@@ -397,24 +397,92 @@
 
 
     
-teks_a = "ID: 1, 2, 2, 3, 4"
-teks_b = "ID: 3, 4, 4, 5"
-teks_a= teks_a.replace("ID:", "").split(",")
-teks_b= teks_b.replace("ID:", "").split(",")
+# teks_a = "ID: 1, 2, 2, 3, 4"
+# teks_b = "ID: 3, 4, 4, 5"
+# teks_a= teks_a.replace("ID:", "").split(",")
+# teks_b= teks_b.replace("ID:", "").split(",")
 
-a = set()
-b = set()
+# a = set()
+# b = set()
 
-for item in teks_a:
-    a.add(int(item))
-for item in teks_b:
-    b.add(int(item))
+# for item in teks_a:
+#     a.add(int(item))
+# for item in teks_b:
+#     b.add(int(item))
 
-hasil = ((len(a)), len(a|b), len( a & b), len(a^b))
-print(hasil)
+# hasil = ((len(a)), len(a|b), len( a & b), len(a^b))
+# print(hasil)
 
+# def nama_sapaan(nama):
+#     return "Halo," + nama
+# nama_sapaan("farid")
+# print(nama_sapaan("Farid"))
 
+# def luas_persegi_panjang(panjang, lebar):
+#     return panjang * lebar
+# print(luas_persegi_panjang(5, 10))
 
+# def is_genap(angka):
+#     if angka % 2 == 0:
+#         return True
+#     else:
+#         return False
+# print(is_genap(12))
+# print(is_genap(7))
+
+# def nilai_huruf(nilai):
+#     if 85 <= nilai <= 100:
+#         return "A"
+#     elif 75 <= nilai <= 85:
+#         return "B"
+#     elif nilai
+
+# def harga_setelah_diskon(harga, diskon=0):
+#     if diskon < 0 or diskon > 100:
+#         return "Error"
+#     else:
+#         return harga - (harga * diskon / 100)
+# print(harga_setelah_diskon(200000, 15))
+        
+# def kalkulator(a, b, operator):
+    
+#     if operator == "+":
+#         return a + b
+#     elif operator == "-":
+#         return a - b
+#     elif operator == "*":
+#         return a * b
+#     elif operator == "/":
+#         if b != 0:
+#             return a / b
+#         else:
+#             return "Error: Pembagian dengan nol"
+#     else:
+#         return "Error: Operator tidak valid"
+
+# print(kalkulator(10, 5, "+"))
+# print(kalkulator(10, 4, "/"))
+
+# def statistik(daftar_angka):
+#     if not daftar_angka:
+#         return "Error: Daftar angka kosong"
+
+#     jumlah = len(daftar_angka)
+#     total = sum(daftar_angka)
+#     rata_rata = total / jumlah
+#     maksimum = max(daftar_angka)
+#     minimum = min(daftar_angka)
+
+#     return {
+#         "jumlah": jumlah,
+#         "total": total,
+#         "rata_rata": rata_rata,
+#         "maksimum": maksimum,
+#         "minimum": minimum
+#     }
+# print(statistik([10, 20, 30, 40]))
+
+# def seleksi_cpns()
 
 
     
