@@ -1,0 +1,15 @@
+========== INVOICE BELANJA ==========
+ID Transaksi : A2610280201826
+Nama Kasir   : adel
+Waktu        : 28-10-2026 02:01
+=====================================
+
+Produk 1
+Nama Produk : kue
+Harga       : Rp1,000
+Jumlah      : 1
+Subtotal    : Rp1,000
+
+=====================================
+TOTAL BELANJA : Rp1,000
+=====================================

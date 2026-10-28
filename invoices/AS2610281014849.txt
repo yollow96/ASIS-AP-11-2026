@@ -1,0 +1,21 @@
+========== INVOICE BELANJA ==========
+ID Transaksi : AS2610281014849
+Nama Kasir   : agus salim
+Waktu        : 28-10-2026 10:14
+=====================================
+
+Produk 1
+Nama Produk : sabun
+Harga       : Rp10,000
+Jumlah      : 5
+Subtotal    : Rp50,000
+
+Produk 2
+Nama Produk : sampo
+Harga       : Rp15,000
+Jumlah      : 4
+Subtotal    : Rp60,000
+
+=====================================
+TOTAL BELANJA : Rp110,000
+=====================================
