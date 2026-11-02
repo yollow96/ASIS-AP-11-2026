@@ -3,16 +3,16 @@ import random
 import os
 
 FOLDER_INVOICE = "invoices"
-FILE_RIWAYAT = "trx_history.txt" 
-LEBAR_TERMINAL = 60 
-LEBAR_STRUK = 70 
+FILE_RIWAYAT = "trx_history.txt"
+LEBAR_TERMINAL = 60
+LEBAR_STRUK = 70
 
 def buat_folder():
     os.makedirs(FOLDER_INVOICE, exist_ok=True) #membuat folder invoces
 
 def tanya(label):
     return input(label.ljust(25) + ": ") #ljust artinya left justify (rata kiri) barudisambung dengan ": "
- 
+
 
 def buat_id_transaksi(nama_kasir, waktu_sekarang):
     waktu_sekarang = datetime.now()
@@ -24,17 +24,17 @@ def buat_id_transaksi(nama_kasir, waktu_sekarang):
 
 def inputan_produk():
     daftar_produk = []
-    while True:    
+    while True:
         nama_produk = tanya("Masukkan nama produk: ")
-        if nama_produk.strip() == "": 
+        if nama_produk.strip() == "":
             print("Nama produk tidak boleh kosong.")
             continue
         try:
-            harga_produk = int(tanya("Masukkan harga produk: "))  
-            jumlah_produk = int(tanya("Masukkan jumlah produk: ")) 
+            harga_produk = int(tanya("Masukkan harga produk: "))
+            jumlah_produk = int(tanya("Masukkan jumlah produk: "))
             if harga_produk < 0 or jumlah_produk <= 0:
-                print("Harga dan Jumlah produk harus positif.") 
-                continue                  
+                print("Harga dan Jumlah produk harus positif.")
+                continue
         except ValueError:
             print("Harga dan Jumlah harus berupa angka.")
             continue
@@ -46,7 +46,7 @@ def inputan_produk():
             print("TRANSAKSI BERHASIL".center(LEBAR_TERMINAL))
             print("=" * LEBAR_TERMINAL)
             break
-            
+
     return daftar_produk
 
 def total_harga(daftar_produk):
@@ -70,23 +70,23 @@ def simpan_struk(nama_kasir, daftar_produk, total, id_tranksaksi, waktu):
         file.write(f"{'Waktu transaksi':<20}: {waktu.strftime('%d/%m/%y %H:%M')}\n")
         file.write(garis + "\n")
         file.write("\n")
-        file.write("Daftar Produk".center(LEBAR_STRUK) + "\n")
+        # CEK: baris 73 tidak terlihat di screenshot, isi sendiri dari file aslimu
         file.write("\n")
 
         file.write(garis_tabel + "\n")
         file.write(" " * 5 + "|" + "Nama".center(20) + "|" + "Harga".center(12)
                    + "|" + "Jumlah".center(8) + "|" + "Total".center(15) + "|\n") # angka = lebarnya
         file.write(garis_tabel + "\n")
- 
+
         for nama, harga, jumlah in daftar_produk:
             subtotal = harga * jumlah
- 
+
             if len(nama) > 18:
                 nama = nama[:15] + "..." #ambil sampe karakter ke 15
- 
+
             file.write(" " * 5 + "|" + f" {nama:<18} " + "|" + f" {'Rp' + str(harga):>10} "
                        + "|" + f" {jumlah:<6} " + "|" + f" {'Rp' + str(subtotal):>13} " + "|\n")
- 
+
         file.write(garis_tabel + "\n")
         file.write(" " * 5 + "|" + "TOTAL".center(20) + " " * 22 + "|"
                    + f" {'Rp' + str(total):>13} " + "|\n") #str biar bisa di +
@@ -107,9 +107,9 @@ def cari_transaksi():
         with open(nama_file, "r") as file:
             isi_struk = file.read()
             print("_" * LEBAR_STRUK)
+            # CEK: baris 110-112 tidak terlihat di screenshot, ini tebakan
             print(isi_struk)
             print("_" * LEBAR_STRUK)
-
     except FileNotFoundError:
         print("Transaksi tidak ditemukan!")
         print("_" * LEBAR_TERMINAL)
@@ -123,15 +123,15 @@ def simpan_riwayat(waktu, id_transaksi, total):
             file.write("|" + "RIWAYAT TRANSAKSI".center(68) + "|\n")
             file.write(garis + "\n")
             file.write("|" + "Waktu".center(17) + "|" + "ID Transaksi".center(24)
-                    + "|" + "Nominal Transaksi".center(25) + "|\n")
+                       + "|" + "Nominal Transaksi".center(25) + "|\n")
             file.write(garis + "\n")
- 
+
     with open(FILE_RIWAYAT, "a") as file:
         file.write("|" + f" {waktu.strftime('%d/%m/%y %H:%M'):<15} " + "|"
                    + f" {id_transaksi:<22} " + "|" + f" {'Rp' + str(total):>23} " + "|\n")
         file.write(garis + "\n")
- 
- 
+
+
 buat_folder()
 
 
@@ -148,11 +148,11 @@ while True:
     print("3. Keluar")
     print("=" * LEBAR_TERMINAL)
     try:
-        opsi = int(input("Masukkan opsi pilihan: ")) 
+        opsi = int(input("Masukkan opsi pilihan: "))
     except ValueError:
         print("Opsi harus berupa angka.")
         continue
-    print("=" * LEBAR_TERMINAL)  
+    print("=" * LEBAR_TERMINAL)
 
 
     if opsi == 1:
@@ -170,4 +170,3 @@ while True:
         print("SAMPAI JUMPA".center(LEBAR_TERMINAL))
         print("=" * LEBAR_TERMINAL)
         break
- 
