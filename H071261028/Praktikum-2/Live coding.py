@@ -194,9 +194,10 @@
 # result = re.sub(pattern, replace, string)
 # print(result)
 
-import re 
-string = ' Hello 1234 \ Welcome 4523 \n Kaito 1412' 
-pattern = '\A' 
-replace = "19"  
-result = re.sub(pattern, replace, string) 
-print(result) 
+# import re 
+# string = ' Hello 1234 \ Welcome 4523 \n Kaito 1412' 
+# pattern = '\A' 
+# replace = "19"  
+# result = re.sub(pattern, replace, string) 
+# print(result) 
+
